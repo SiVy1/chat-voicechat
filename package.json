@@ -1,0 +1,25 @@
+{
+  "name": "voice-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:css": "postcss public/styles/tailwind.css -o public/styles/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "pug": "^3.0.2",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
