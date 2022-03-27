@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="h-screen flex">
+        <div class="w-1/2 h-screen flex bg-red-400 text-white text-center align-middle justify-center items-center">
+            <div class="p-2 text-center flex justify-center align-middle items-center">
+                Eiusmod nisi reprehenderit exercitation commodo adipisicing velit aute minim voluptate velit magna enim enim. Non veniam Lorem exercitation veniam cupidatat ad aute ad do. Laboris nostrud proident occaecat sit labore magna minim est fugiat ad veniam Lorem. Labore aliquip deserunt sint nulla quis laborum.
+            </div>
+        </div>
+        <div class="w-1/2 h-screen bg-blue-400 flex text-white float-right text-center justify-center align-middle">
+            <div class="p-2 text-center flex justify-center align-middle items-center">
+                Eiusmod nisi reprehenderit exercitation commodo adipisicing velit aute minim voluptate velit magna enim enim. Non veniam Lorem exercitation veniam cupidatat ad aute ad do. Laboris nostrud proident occaecat sit labore magna minim est fugiat ad veniam Lorem. Labore aliquip deserunt sint nulla quis laborum.
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:3000');
+        socket.on('update', () =>{
+            document.createElement('div').innerText = "xd"
+        })
+        socket.on('adduser', function(usernames){
+            socket.emit('useradd', prompt("Jak się nazywasz: "));
+            console.log(usernames)
+        });
+        </script>
+</body>
+</html>
